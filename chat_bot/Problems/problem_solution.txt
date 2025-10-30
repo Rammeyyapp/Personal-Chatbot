@@ -1,0 +1,56 @@
+1. Response Iteration:
+    The model is giving a very good response for user text. But when parsing it just displaying "IT" for every query.
+    Solution:
+        The script.js is not iterating through whole response and not unpacking the full response. So, just modified
+        the script.js code and then solve the problem.
+
+
+2. LLM Instruction:
+    When giving some more text from user end, the model consider it as content given to post in linkedin. 
+    Solution:
+        Rewritted the whole System Prompt. And also tool description in very clear and detailed way.
+
+
+3. Response Speed:
+    Using large LLM model like qwen2b:7 instruct model taking more time for response. Also parsing and giving 
+    the response text from script.js is also very complex
+    Solution: 
+        Now downloaded the smaller model then qwen2b:7 which is phi3:mini instruct model. And also modified 
+        script.js for simpler parsing. Now the speed latency is get reduced.
+
+
+4. Model Inability:
+    Smaller models are not capable of supporting tools and function call. But for my project I need smaller
+    models. 
+    Solution:
+        I have implement tool selection functionality to smaller models through system prompt. By specifying
+        tools details in system prompt, it can be achieveable.
+
+
+5. Model Limitation: 
+    specifying the tool calling function in system prompt and make the model to handle both for answering 
+    general query and tool calling & vice versa is not a very good functionality.
+    Solution:
+        Each LLM is built for specific use case. By adding to do external functionality (eg: tool calling for instruct model )
+        on system prompt will not work because it hits the models limitation. Rather sticking to its ability 
+        will retrive best from the LLM. 
+        Now for personal chatbot, implemented multi model workflow. 
+            1. Classifier - phi3:mini 
+            2. Answering general query - phi3:mini 
+            3. Tool Calling - llama3.1:8b-instruct-q4_K_M
+
+        Workflow:
+            1. The user query will first meets the classifier. It classifies the user intent as two 
+               categories.
+            2. By using that intent the LLM will selected and response directly to the client.
+
+
+6. Response time (Multi Model Workflow):
+    Using 2 ollama model and being running in our local system without having dedicated gpu will makes 
+    the response time increase. 
+    Solution:
+        To optimize the working with cpu a extra payload was added while calling the LLM. That is to tell 
+        how many threads(num_threads) should the LLM should use to perform on query. This reduces the response time. 
+        Earlier the LLM uses lower no of threads to process the query. 
+        
+
