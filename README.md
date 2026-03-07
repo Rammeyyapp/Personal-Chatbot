@@ -24,9 +24,9 @@ The system's core function is to intelligently orchestrate external API tools ba
 The agent's value lies in automating repetitive or multi-step tasks that traditionally require manual switching between applications, all while ensuring user data remains private.
 
 1.  **Workflow Automation & API Orchestration:** The agent translates high-level requests into structured actions across different domains.
-    * *Example:* Translating *"Send an email to John about the project update with no subject"* into a structured $\text{send\_email(recipient, subject, body)}$ call.
+    Eg: $\text{send\_email(recipient, subject, body)}$ call.
 2.  **Personal Productivity & Information Retrieval:** It acts as a digital co-pilot for daily tasks.
-    * *Example:* Automating travel lookups using $\text{search\_trains(source\_city, destination\_city, date\_of\_journey)}$.
+    Eg: $\text{search\_trains(source\_city, destination\_city, date\_of\_journey)}$.
 3.  **Technical Differentiator: Privacy and Cost-Efficiency:**
     * All natural language processing, planning, and intent classification occur **locally** via Ollama, ensuring data never leaves the device and eliminating reliance on paid, rate-limited cloud APIs for the core intelligence.
 
