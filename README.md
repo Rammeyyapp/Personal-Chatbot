@@ -1,10 +1,10 @@
-# 🤖 Personal AI Agent: Autonomous Assistant with API Orchestration
+# Personal AI Agent: Autonomous Assistant with API Orchestration
 
 This project implements a fully **local, privacy-preserving AI Agent** that serves as a personal assistant capable of executing real-world, multi-domain tasks. It is built entirely on open-source components, demonstrating a robust architecture for Agentic AI workflows without relying on paid cloud services for core intelligence.
 
 ---
 
-## 🎯 Core Function and Architecture
+## Core Function and Architecture
 
 The system's core function is to intelligently orchestrate external API tools based on a natural language user request, following a streamlined **Think-Plan-Act** loop. A unique dual-LLM approach is used to optimize efficiency and resource utilization.
 
@@ -19,7 +19,7 @@ The system's core function is to intelligently orchestrate external API tools ba
 
 ---
 
-## 🚀 Key Use Cases and Capabilities
+## Key Use Cases and Capabilities
 
 The agent's value lies in automating repetitive or multi-step tasks that traditionally require manual switching between applications, all while ensuring user data remains private.
 
@@ -32,7 +32,7 @@ The agent's value lies in automating repetitive or multi-step tasks that traditi
 
 ---
 
-## 🏗️ Technology Stack
+## Technology Stack
 
 The agent is built on a modern, open-source stack designed for speed, flexibility, and local operation.
 
@@ -45,7 +45,7 @@ The agent is built on a modern, open-source stack designed for speed, flexibilit
 
 ---
 
-## 🛠️ Environment Setup
+## Environment Setup
 
 The environment is divided into the Local LLM Server (Ollama) and the Application Stack (FastAPI & React).
 
@@ -69,7 +69,7 @@ The environment is divided into the Local LLM Server (Ollama) and the Applicatio
 
 ---
 
-## ☁️ Hosting and Deployment
+## Hosting and Deployment
 
 The solution is structured to maximize flexibility while preserving the core privacy features.
 
@@ -78,7 +78,7 @@ The solution is structured to maximize flexibility while preserving the core pri
 
 ---
 
-## 🖼️ Conceptual Architecture (Wireframe)
+## Conceptual Architecture (Wireframe)
 
 The system employs a sequential request flow based on the $\text{ReAct}$ pattern:
 
